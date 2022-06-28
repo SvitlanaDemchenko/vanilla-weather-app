@@ -1,0 +1,13 @@
+body {
+    background: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+}
+
+.app {
+    display: block;
+    height: 500px;
+    width: 700px;
+    border: 2px solid #685454;
+    border-radius: 15px;
+    background-color: #fffdfb;
+    margin: 80px auto;
+}
