@@ -10,6 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -19,10 +20,10 @@
       <div class="app-wrapper">
         <div class="app">
           <div class="overview">
-            <h1>Rivne</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Monday</li>
-              <li>Clear</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -33,14 +34,13 @@
               />
             </div>
             <div class="col-5">
-              <strong class="temp">15</strong>
+              <strong class="temp" id="temperature"></strong>
               <span class="units">°C | °F</span>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 50%</li>
-                <li>Wind: 5 kmph</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="windspeed"></span> kmph</li>
               </ul>
             </div>
           </div>

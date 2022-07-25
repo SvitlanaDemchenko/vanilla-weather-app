@@ -32,6 +32,7 @@ ul {
 li {
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 small {
   color: rgb(166, 193, 238);
