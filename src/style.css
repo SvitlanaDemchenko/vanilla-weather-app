@@ -1,13 +1,49 @@
 body {
-    background: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+  color: white;
 }
-
+.app-wrapper {
+  display: block;
+  margin: 80px auto;
+  max-width: 700px;
+}
 .app {
-    display: block;
-    height: 500px;
-    width: 700px;
-    border: 2px solid #685454;
-    border-radius: 15px;
-    background-color: #fffdfb;
-    margin: 80px auto;
+  background: linear-gradient(
+    to top,
+    rgb(251, 194, 235) 0%,
+    rgb(166, 193, 238) 100%
+  );
+
+  border-radius: 15px;
+  background-color: #fffdfb;
+  padding: 20px;
+}
+.overview {
+  margin-bottom: 40px;
+}
+h1 {
+  font-weight: bolder;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+small {
+  color: rgb(166, 193, 238);
+}
+.col-1 img {
+  width: 60px;
+}
+.temp {
+  font-size: 64px;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  top: -32px;
 }
