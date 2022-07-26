@@ -48,3 +48,20 @@ small {
   position: relative;
   top: -32px;
 }
+#description {
+  text-transform: lowercase;
+}
+
+#description:first-letter {
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: white;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
