@@ -90,7 +90,16 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
-
+let currentcity = document.querySelector("#city");
+function showWeather(response) {
+  let tempCurrentcity = document.querySelector("#temperature");
+  tempCurrentcity.innerHTML = `${Math.round(response.data.main.temp)}°`;
+  let windCurrentCity = document.querySelector("#windspeed");
+  windCurrentCity.innerHTML = `${response.data.wind.speed}`;
+  let weatherDescription = document.querySelector("#description");
+  weatherDescription.innerHTML = `${response.data.weather[0].description}`;
+  currentcity.innerHTML = `${response.data.name}`;
+}
 function search(city) {
   let apiKey = "5c2ff80778e5c1edc5c59ec4c69ffecc";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -104,5 +113,18 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function retrievePosition(position) {
+  let apiKey = "5c2ff80778e5c1edc5c59ec4c69ffecc";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(showWeather);
+}
+function showCurrentWeather() {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+let current = document.querySelector("#current");
+current.addEventListener("click", showCurrentWeather);
 
 search("New York");
