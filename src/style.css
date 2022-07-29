@@ -1,6 +1,7 @@
 body {
   font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
-  color: white;
+  color: rgb(79, 129, 199, 0.9);
+  background-image: url(https://grand-vacherin-42ce97.netlify.app/img/background-img.jpg);
 }
 .app-wrapper {
   display: block;
@@ -8,11 +9,7 @@ body {
   max-width: 700px;
 }
 .app {
-  background: linear-gradient(
-    to top,
-    rgb(251, 194, 235) 0%,
-    rgb(166, 193, 238) 100%
-  );
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 
   border-radius: 15px;
   background-color: #fffdfb;
@@ -35,7 +32,7 @@ li {
   text-transform: capitalize;
 }
 small {
-  color: rgb(166, 193, 238);
+  color: white;
 }
 .col-1 img {
   width: 60px;
@@ -74,4 +71,7 @@ a {
 }
 .weather-forecast-temp {
   font-size: 13px;
+}
+.button-search {
+  background-color: rgb(79, 129, 199, 0.9);
 }
